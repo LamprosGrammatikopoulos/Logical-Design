@@ -1,0 +1,15 @@
+module f0(x2,b0,b1,b2,b3);
+  
+	input b0,b1,b2,b3;
+	output x2;
+
+	wire wire_not_1, wire_not_2, wire_3, wire_4;
+
+	and gate_and_1(wire_3, b0, wire_not_2);
+	not gate_not_1(wire_not_1, b0);
+	or gate_or(x2, wire_3, wire_4);
+	not gate_not_2(wire_not_2, b1);
+	and gate_and_2(wire_4, b1, wire_not_1);
+
+endmodule
+
